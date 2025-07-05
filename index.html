@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Cantina da Dona Elza</title>
+    <style>
+        /* --- GERAL E FONTES --- */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap');
+
+        :root {
+            --primary-color: #c82a34; /* Um vermelho/vinho que remete a comida */
+            --secondary-color: #4A4A4A;
+            --background-color: #F8F8F8;
+            --card-background: #FFFFFF;
+            --font-family: 'Nunito Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+        }
+
+        /* --- CABEÇALHO --- */
+        header.main-header {
+            background-color: var(--card-background);
+            text-align: center;
+            padding: 20px 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        header.main-header h1 {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2em;
+        }
+
+        header.main-header p {
+            font-size: 1em;
+            color: #777;
+        }
+        
+        /* --- MENU PRINCIPAL --- */
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--secondary-color);
+            border-bottom: 2px solid #EAEAEA;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 15px;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .item-header h3 {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: 800;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .description {
+            margin-top: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        /* --- BOTÃO FLUTUANTE WHATSAPP --- */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-button svg {
+            width: 30px;
+            height: 30px;
+        }
+        
+        /* --- RODAPÉ --- */
+        footer {
+            text-align: center;
+            padding: 40px 15px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Lanchonete Sabor do Reino</h1>
+        <p>Tem sabor de mel!</p>
+    </header>
+
+    <main id="menu">
+        <section class="category">
+            <h2>Sopas</h2>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Canja</h3>
+                    <span class="price">R$ 7,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Pratos Principais</h2>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Pratinho</h3>
+                    <span class="price">R$ 12 / R$ 14</span>
+                </div>
+                <p class="description">
+                    <strong>Acompanhamentos:</strong> Arroz, creme de galinha, vatapá, farofa, salada de repolho, legumes cozidos e uma opção de carne do dia.
+                </p>
+            </div>
+        </section>
+        
+        <section class="category">
+            <h2>Salgados</h2>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Pastel Simples (1 sabor)</h3>
+                    <span class="price">R$ 8,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Pastel (2 sabores)</h3>
+                    <span class="price">R$ 10,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Pastel Tudão</h3>
+                    <span class="price">R$ 13,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Batatinha Frita</h3>
+                    <span class="price">R$ 8 / R$ 10</span>
+                </div>
+                <p class="description">Porção pequena (R$8) e porção grande (R$10).</p>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>Sobremesas</h2>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Bolo do Dia</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+                <p class="description">Fatia generosa do nosso bolo caseiro. Consulte o sabor do dia!</p>
+            </div>
+        </section>
+        
+        <section class="category">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Suco Natural (Copo)</h3>
+                    <span class="price">R$ 2,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Suco Natural (Garrafa)</h3>
+                    <span class="price">R$ 6,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Coca-Cola PET (200ml)</h3>
+                    <span class="price">R$ 4,00</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Refrigerante em Lata</h3>
+                    <span class="price">R$ 5,00</span>
+                </div>
+                 <p class="description">Consulte os sabores disponíveis.</p>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Água Mineral</h3>
+                    <span class="price">R$ 2,50</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="item-header">
+                    <h3>Água com Gás</h3>
+                    <span class="price">R$ 3,50</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <a href="https://wa.me/55119XXXXXXXX?text=Olá!%20Vi%20o%20cardápio%20e%20gostaria%20de%20fazer%20um%20pedido." class="whatsapp-button" target="_blank">
+        <svg viewBox="0 0 800 800" fill="currentColor"><path d="M627.4 530.2c-9.2-4.6-54.3-26.8-62.7-29.8-8.4-3-14.5-4.6-20.7 4.6-6.2 9.2-23.7 29.8-29.1 35.9-5.4 6.2-10.8 7-20 2.3-9.2-4.6-38.9-14.3-74.1-45.7-27.4-24.3-46-54.5-51.4-63.7-5.4-9.2-0.6-14.3 4.1-18.9 4.1-4.1 9.2-10.4 13.8-15.5 4.6-5.1 6.2-9.2 9.2-15.5 3-6.2 1.5-11.6-0.8-16.2-2.3-4.6-20.7-49.9-28.3-68.2-7.6-18.3-15.2-15.8-20.7-16.1-5.4-0.3-11.6-0.3-17.8-0.3-6.2 0-16.2 2.3-24.6 11.6-8.4 9.2-32.2 31.4-32.2 76.4 0 45 33 88.6 37.6 94.7 4.6 6.2 64.4 98.4 156.2 137.2 21.6 9.4 38.6 15 51.8 19.3 16.2 5.4 31 4.6 42.6 2.8 12.4-1.8 38.9-15.8 44.3-31.1 5.4-15.2 5.4-28.3 3.8-31.1-1.6-2.9-7.8-4.7-17-9.3zM400 0C179.1 0 0 179.1 0 400s179.1 400 400 400 400-179.1 400-400S620.9 0 400 0zM400 732.9c-183.8 0-332.9-149.1-332.9-332.9S216.2 67.1 400 67.1s332.9 149.1 332.9 332.9-149.1 332.9-332.9 332.9z"></path></svg>
+    </a>
+
+    <footer>
+        <p><strong>Lanchonete Sabor do Reino</strong></p>
+        <p>Av VI, 81 - Jereissati 1.</p>
+        <p>Horário: Terça a Domingo, das 18h às 22h</p>
+    </footer>
+
+</body>
+</html>
