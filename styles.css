@@ -1,0 +1,157 @@
+        /* --- GERAL E FONTES --- */
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap');
+
+        :root {
+            --primary-color: #c82a34;
+            --secondary-color: #4A4A4A;
+            --background-color: #F8F8F8;
+            --card-background: #FFFFFF;
+            --font-family: 'Nunito Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        /* --- CABEÇALHO --- */
+        header.main-header {
+            background-color: var(--card-background);
+            text-align: center;
+            padding: 20px 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        header.main-header h1 {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 2em;
+        }
+
+        header.main-header p {
+            font-size: 1em;
+            color: #777;
+        }
+        
+        /* --- MENU PRINCIPAL --- */
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 15px;
+            position: relative;
+        }
+        
+        /* --- ESTILO BOTÃO VOLTAR AO TOPO --- */
+        #back-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+        }
+
+        #back-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #back-to-top-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .category {
+            margin-bottom: 40px;
+        }
+
+        .category h2 {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--secondary-color);
+            border-bottom: 2px solid #EAEAEA;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--card-background);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 15px;
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .item-header h3 {
+            font-size: 1.2em;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 1.2em;
+            font-weight: 800;
+            color: var(--primary-color);
+            white-space: nowrap;
+        }
+
+        .description {
+            margin-top: 8px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 15px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
