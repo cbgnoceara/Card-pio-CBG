@@ -3,136 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Cardápio - Lanchonete Sabor do Reino</title>
-    <style>
-        /* --- GERAL E FONTES --- */
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&display=swap');
-
-        :root {
-            --primary-color: #c82a34; /* Um vermelho/vinho que remete a comida */
-            --secondary-color: #4A4A4A;
-            --background-color: #F8F8F8;
-            --card-background: #FFFFFF;
-            --font-family: 'Nunito Sans', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--secondary-color);
-            
-            /* --- LINHA ADICIONADA AQUI --- */
-            user-select: none; /* Impede a seleção de texto no padrão */
-            -webkit-user-select: none; /* Para compatibilidade com Safari/Chrome */
-            -moz-user-select: none; /* Para compatibilidade com Firefox */
-            -ms-user-select: none; /* Para compatibilidade com IE/Edge */
-        }
-
-        /* --- CABEÇALHO --- */
-        header.main-header {
-            background-color: var(--card-background);
-            text-align: center;
-            padding: 20px 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            border-bottom: 3px solid var(--primary-color);
-        }
-
-        header.main-header h1 {
-            color: var(--primary-color);
-            font-weight: 800;
-            font-size: 2em;
-        }
-
-        header.main-header p {
-            font-size: 1em;
-            color: #777;
-        }
-        
-        /* --- MENU PRINCIPAL --- */
-        main {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
-
-        .category {
-            margin-bottom: 40px;
-        }
-
-        .category h2 {
-            font-size: 1.8em;
-            font-weight: 800;
-            color: var(--secondary-color);
-            border-bottom: 2px solid #EAEAEA;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .menu-item {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--card-background);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 15px;
-            transition: transform 0.2s ease-in-out;
-        }
-        
-        .menu-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .item-header h3 {
-            font-size: 1.2em;
-            color: #333;
-            font-weight: 700;
-        }
-
-        .price {
-            font-size: 1.2em;
-            font-weight: 800;
-            color: var(--primary-color);
-            white-space: nowrap;
-        }
-
-        .description {
-            margin-top: 8px;
-            font-size: 0.95em;
-            line-height: 1.5;
-            color: #666;
-        }
-        
-        /* --- RODAPÉ --- */
-        footer {
-            text-align: center;
-            padding: 40px 15px;
-            color: #999;
-            font-size: 0.9em;
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-    </style>
 </head>
 <body>
 
-    <header class="main-header">
+    <header class="main-header" id="top">
         <h1>Lanchonete Sabor do Reino</h1>
         <p></p>
     </header>
@@ -253,8 +129,16 @@
     <footer>
         <p><strong>Lanchonete Sabor do Reino</strong></p>
         <p>Av VI, 81 - Jereissati 1.</p>
-        <p>Horário: Terça a Domingo, das 18h às 22h</p>
+        <p>Horário: Terça a Domingo, das 18h às 22h.</p>
     </footer>
+
+    <a href="#top" id="back-to-top-btn" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </a>
+    
+    <script src="/script.js"></script>
 
 </body>
 </html>
